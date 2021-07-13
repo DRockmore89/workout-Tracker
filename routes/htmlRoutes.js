@@ -13,4 +13,4 @@ Router.get("/stats", (req, res) =>
  res.sendFile(path.join(__dirname, "../public/stats.html"))
 );
 // export html routes
-module.exports = router;
+module.exports = Router;
