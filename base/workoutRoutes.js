@@ -1,9 +1,8 @@
-const { Router } = require("express");
-const { model } = require("mongoose");
 
-const router = requirer("express").Router();
-const Workout = requirer("../../models/Workout.js");
-const express = requirer("express");
+
+const router = require("express").Router();
+const Workout = require("../../models/Workout.js");
+const express = require("express");
 const app = express();
 
 model.export = router;
