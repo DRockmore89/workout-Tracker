@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const route = require("express").Router();
+const router = require("express").Router();
 const path = require("path");
 
 // Workout tracker homepage
