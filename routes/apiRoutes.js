@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Workout = require("../models/Workout");
 
-module.exports = router;
+
 
 router.get("/api/workouts", function (req, res) {
   Workout.find()
@@ -71,3 +71,5 @@ router.get("/api/workouts/range", function (req, res) {
       res.json(err);
     });
 });
+
+module.exports = router;
