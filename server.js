@@ -10,12 +10,10 @@ app.use(morgan("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/workout',
-    {
+    process.env.MONGODB_URI || 'mongodb://localhost/workout', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
@@ -23,10 +21,10 @@ mongoose.connect(
     }
 );
 
-app.use(require("./routes/apiRoutes"));
-app.use(require("./routes/htmlRoutes"));
+// the routes
+app.use(require('./routes/api'));
+app.use(require('./routes/view'));
 
-app.listen(port, () => {
-    console.log(`App running on port ${PORT}!`);
+app.listen(PORT, () => {
+    console.log(`App listening at port ${PORT}`);
 });
-
