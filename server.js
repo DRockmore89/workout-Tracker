@@ -6,7 +6,7 @@ const PORT = process.env.port || 3004;
 
 const app = express();
 
-app.use(logger("dev"));
+app.use(morgan("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
